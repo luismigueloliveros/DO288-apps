@@ -30,6 +30,9 @@ spec:
             fieldRef:
               fieldPath: metadata.namespace
         image: micro-java:1.0
+        envFrom:
+          - configMapRef:
+              name: configmap-hello
         imagePullPolicy: IfNotPresent
         name: quarkus
         ports:
